@@ -4,3 +4,14 @@
 // Se muestra en la consola el valor de ambas variables para observar cómo se accede a ellas y cuál prevalece 
 // en cada contexto.
 
+var variable = "Variable global";
+
+function mostrarVariables() {
+  var variable = "Variable local";
+  
+  console.log("Valor de la variable local: " + variable);
+}
+
+mostrarVariables();
+
+console.log("Valor de la variable global fuera de la función: " + variable);
